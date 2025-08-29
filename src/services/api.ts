@@ -64,8 +64,8 @@ export const fetchMovieReviews = async (movieId: number): Promise<any> => {
 export const fetchMoviesBySearch = async (
   query: string,
   page: number
-): Promise<any> => {
+): Promise<MoviesResponse> => {
   const urlSearch = `${URL}/search/movie?query=${query}&include_adult=true&language=en-US&page=${page}`;
-  const response = await axios.get(urlSearch, options);
+  const response = await axios.get<MoviesResponse>(urlSearch, options);
   return response.data;
 };
