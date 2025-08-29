@@ -1,0 +1,20 @@
+.wrap {
+  background-color: #05253f;
+  border-radius: 100px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media (max-width: 380px) {
+    font-size: 16px;
+  }
+}
+
+.icon {
+  margin-right: 5px;
+}

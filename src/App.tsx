@@ -22,9 +22,7 @@ function App() {
 
   return (
     <>
-      <header>
-        <Navigation />
-      </header>
+      <Navigation />
 
       <main className="main">
         <Suspense>
@@ -40,9 +38,7 @@ function App() {
         </Suspense>
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
 
       {isBigScreen && <GoUp />}
     </>

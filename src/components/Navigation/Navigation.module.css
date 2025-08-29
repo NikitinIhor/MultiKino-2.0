@@ -1,0 +1,49 @@
+.nav {
+  background-color: #05253f;
+  border-radius: 100px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  gap: 12px;
+}
+
+.link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  text-align: center;
+  transition: background-color 0.3s ease 0s;
+
+  &:hover,
+  &:focus {
+    background-color: #2ec4ee;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    gap: 5px;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 16px;
+  }
+
+  .icon {
+    @media (max-width: 350px) {
+      display: none;
+    }
+  }
+}
+
+.active {
+  background-color: #10b3e1;
+}

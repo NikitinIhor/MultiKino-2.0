@@ -1,0 +1,20 @@
+.btn {
+  background-color: #05253f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 12px;
+  padding: 12px 35px;
+  height: 64px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.3s ease 0s;
+
+  &:hover,
+  &:focus {
+    background-color: #10b3e1;
+  }
+}
