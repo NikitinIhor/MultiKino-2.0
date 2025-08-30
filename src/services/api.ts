@@ -1,4 +1,5 @@
 import axios from "axios";
+import type { Movie } from "../types/movie";
 
 const TOKEN = import.meta.env.VITE_API_READ_ACCESS_TOKEN_TMDB;
 const URL = import.meta.env.VITE_BASE_URL;
@@ -8,15 +9,6 @@ const options = {
     Authorization: `Bearer ${TOKEN}`,
   },
 };
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string | null;
-  overview: string;
-  vote_average: number;
-  release_date: string;
-}
 
 interface Genres {
   id: number;
@@ -45,7 +37,7 @@ export const fetchGenres = async (): Promise<Genres[]> => {
 
 export const fetchMovieByID = async (movieId: number): Promise<Movie> => {
   const urlMovieId = `${URL}/movie/${movieId}?language=en-US`;
-  const response = await axios.get(urlMovieId, options);
+  const response = await axios.get<Movie>(urlMovieId, options);
   return response.data;
 };
 
